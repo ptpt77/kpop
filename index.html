@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>K-Pop Album Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER & NAVIGASI -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50?text=KPOP" alt="Logo">
+            <h1>K-Pop Album Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('beranda')" class="nav-link active">Beranda</a></li>
+                <li><a href="#" onclick="showPage('transaksi')" class="nav-link">Transaksi</a></li>
+                <li><a href="#" onclick="showPage('profil')" class="nav-link">Profil</a></li>
+                <li><a href="#" onclick="showPage('login')" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- BERANDA -->
+    <section id="beranda" class="page active">
+    <h2>Cara Menggunakan Aplikasi 💿</h2>
+
+    <div class="step-container">
+        <div class="step-card">
+            <span class="step-icon">🔐</span>
+            <h3>Login Akun</h3>
+            <p>Masuk ke aplikasi menggunakan email dan password kamu.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-icon">🛒</span>
+            <h3>Isi Transaksi</h3>
+            <p>Pilih menu Transaksi dan isi data pembelian album K-Pop.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-icon">💾</span>
+            <h3>Simpan Data</h3>
+            <p>Klik tombol simpan untuk menyimpan transaksi.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-icon">📋</span>
+            <h3>Lihat Daftar Transaksi</h3>
+            <p>Lihat semua transaksi yang telah kamu input.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- TRANSAKSI -->
+    <section id="transaksi" class="page">
+        <h2>Form Transaksi</h2>
+
+        <form id="transaksiForm">
+            <label>Nama Transaksi</label>
+            <input type="text" id="nama">
+            <small class="error" id="errNama"></small>
+
+            <label>Jumlah</label>
+            <input type="number" id="jumlah">
+            <small class="error" id="errJumlah"></small>
+
+            <label>Kategori</label>
+            <select id="kategori">
+                <option value="">-- Pilih --</option>
+                <option>Album K-Pop</option>
+                <option>Merchandise</option>
+            </select>
+            <small class="error" id="errKategori"></small>
+
+            <button type="submit">Simpan</button>
+        </form>
+
+        <br>
+        <a href="#" onclick="toggleDaftar()">Lihat Daftar Transaksi</a>
+
+        <table id="tabel">
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody id="isiTabel">
+                <tr>
+                    <td colspan="3">Belum ada transaksi</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil" class="page">
+        <h2>Profil Aplikasi</h2>
+        <p>
+            K-Pop Album Store adalah aplikasi e-commerce sederhana
+            berbasis web yang digunakan untuk mempelajari HTML, CSS,
+            dan JavaScript dasar. Aplikasi ini mendukung transaksi
+            album K-Pop dan memiliki desain responsif.
+        </p>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login" class="page">
+        <h2>Login</h2>
+        <form>
+            <label>Email</label>
+            <input type="email">
+            <label>Password</label>
+            <input type="password">
+            <button>Login</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 K-Pop Album Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
