@@ -110,4 +110,36 @@ footer {
     margin-top: 40px;
 }
 
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+
 
